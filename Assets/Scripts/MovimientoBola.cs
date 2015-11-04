@@ -20,8 +20,9 @@ public class MovimientoBola : MonoBehaviour {
 			empezarJuego = true;
 		}
 		if (empezarJuego) {
-			if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended) {
+			//if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended) {
 			//if (Input.GetMouseButtonDown (0)) {
+			if (Input.GetMouseButtonDown (0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)) {
 				cambiarDireccionMovimiento ();
 				if (direccion.Equals(Vector3.left)) {
 					transform.localEulerAngles = new Vector3(0f, -90f, 0f);
